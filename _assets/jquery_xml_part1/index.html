@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NCAA Testing</title>
+
+<script src="js/jquery-1.6.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$("#message").text("DOM Loaded and Ready");
+  startLoadXml();
+});
+
+function startLoadXml() {
+  $("#message").text("loadXML has begun!");
+  $.ajax({
+    type: "GET",
+    url: "ncaa.xml",
+    dataType: "xml",
+    success: parseXml
+  });
+} //close loadXML
+
+
+function parseXml(xml)
+{
+	$("#message").text("parseXml has begun!");
+
+  $(xml).find("person").each(function()
+  {
+    $(".person").append($(this).attr("name") + "<br />");
+	$(".person").append($(this).find("location").text() + "<br />");
+	$(".person").append($(this).find("occupation").text() + "<br />");
+	$(".person").append($(this).find("role").text() + "<br />-----<br />");
+	
+	
+	// getting super fancy -- third part of class
+	/*
+	$("#points").append("<div class=\"point\" id=\"" + $(this).find("cords").text() + "\">" + "<br /><span>" + $(this).attr("name") + "</span><br /><p>Location: " + $(this).find("location").text() + "<br />Occupation: " + $(this).find("occupation").text() + "<br /><a href=\"#\">more</a>");
+	
+	
+	// getting a little fancy -- second part of class
+	$("#list").append("<li><a href=\"#\" rel=\"" + $(this).find("cords").text() + "\">" + $(this).attr("name") +"</a></li>");
+	 */
+  });
+
+
+}
+
+</script>
+
+
+
+
+
+</head>
+
+<body>
+<p id="message">No data loaded.</p>
+
+<p class="person"></p>
+
+<!-- getting fancy 
+ <div class="content">
+   	<div class="map">
+			<img src="us_map_blue.png" alt="Locations of characters in NCAA Investigation" width="800" height="600" />
+            
+            <p id="points"></p>
+           </div></div>
+
+
+<h3>Characters</h3>
+<ul class="nav">
+<p id="list"></p>
+</ul>
+<p> Sidebar text</p><p>More text to explain project goes here.</p>
+</div>
+-->
+
+
+
+</body>
+</html>

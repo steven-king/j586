@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <name>Load XML With jQuery</name>
+    <script src="jquery-1.2.6.js" type="text/javascript"></script>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+    
+    $(document).ready(function()
+      {
+        
+        $.ajax({
+		type: "GET",
+		url: "myData.xml",
+		dataType: "xml",
+		success: function(xml) {
+                    
+                $('body').append('<h1>Top Journalists</h1>');
+                $('body').append('<dl />');
+
+        $(xml).find('person').each(function(){
+            //console.log("once for every person");
+            var $person = $(this); 
+            var name = $person.attr("name");
+            var description = $person.find('description').text();
+            var imageurl = $person.attr('imageurl');
+
+            var html = '<dt> <img class="bioImage" alt="" src="' + imageurl + '" /> </dt>';
+            html += '<dd> <span class="loadingPic" alt="Loading" />';
+            html += '<p class="name">' + name + '</p>';
+            html += '<p> ' + description + '</p>' ;
+            html += '</dd>';
+
+            $('dl').append($(html));
+            
+            $('.loadingPic').fadeOut(1400);
+        });
+                }
+    });
+});
+    </script>
+
+</head>
+<body>
+</body>
+</html>
