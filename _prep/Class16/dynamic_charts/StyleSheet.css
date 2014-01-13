@@ -1,0 +1,81 @@
+﻿body
+{
+    color: #666;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 90%;
+    line-height: 1.4em;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+}
+
+p
+{
+    margin: 12px 0;
+     line-height: 1.4em;
+}
+
+h1, dl
+{
+    padding: 0;
+    text-align: left;
+    line-height: 1em;
+}
+.name
+{
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #56A0D3;
+}
+
+.bioImage
+{
+    clear: left;
+    width: 150px;
+    border:1px solid #56A0D3;
+}
+h1
+{
+    font-size: 2em;
+    color: #56A0D3;
+    margin-bottom: 1em;
+}
+
+dl, dd, dt, img, p
+{
+    margin: 0;
+    padding: 0;
+}
+
+dt
+{
+    clear: left;
+    width: 150px;
+    float: left;
+    height: 1%;
+    margin-bottom: 20px;
+}
+
+
+dd
+{
+    margin-left: 170px;
+    margin-bottom: 20px;
+    height: 1%;
+}
+
+dd:after
+{
+    content: ".";
+    visibility: hidden;
+    clear: both;
+    display: block;
+    height: 0;
+}
+.loadingPic
+{
+    margin: auto;
+    background: url(loadingIcon.gif) no-repeat 0 0;
+    padding-left: 25px;
+}

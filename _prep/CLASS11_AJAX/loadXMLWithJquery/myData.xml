@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<people>
+    <person name="William Randolph Hearst" imageurl="images/hurst.gif">
+        <description>
+            Hearst was well known as one of the biggest publishers and journalists of his time. He started with The San Francisco Examiner, and went from there. Hearst was one of the instigators of “yellow journalism” which started a whole branch of journalism that involved sensationalism.
+        </description>
+    </person>
+
+    <person name="Edward R. Murrow" imageurl="images/murrow.jpg">
+        <description>
+            The most distinguished figure in broadcast journalism in the U.S. is Edward R. Murrow. He developed many of the techniques associated with newsgathering for broadcast. His integrity, and his willingness to go up against the “powers that be” was a mark of his career. He influenced public opinion and even policy by exposing the abuses of power in the government.
+        </description>
+    </person>
+
+    <person name="Bob Woodward" imageurl="images/woodward.jpg">
+        <description>
+            Robert Upshur “Bob” Woodward is an American investigative journalist and non-fiction author. He has worked for The Washington Post since 1971 as a reporter, and is now an associate editor of the Post.
+        </description>
+    </person>
+    
+</people>
