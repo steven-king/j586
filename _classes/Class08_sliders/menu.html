@@ -11,8 +11,8 @@
             $('#demo-html').ddslick({
                 onSelected: function (data) {
                     console.log("Selected" + data.selectedIndex);
-                    
-                    if (data.selectedIndex == 0) {
+                    console.log(data.value);
+                    if (data.selectedValue ==  0) {
                         window.open("http://facebook.com");
                     }
                     
