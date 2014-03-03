@@ -3,15 +3,23 @@ body{
 }
 
 
+
+
 .bg-blue{
     background: #56A0D3;
     color:white;
 }
 
-img{
+.floatRight{
     float:right;
     border: 1px solid black;
     margin-top:20px;
+}
+
+.floatLeft{
+    float:left;
+    border: 1px solid black;
+    display: inline;
 }
 
 .characters p {
@@ -37,3 +45,5 @@ ul.characters h3{
 	padding:0px;
 	color:#2779aa;	
 }
+
+
