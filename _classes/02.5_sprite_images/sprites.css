@@ -1,69 +1,16 @@
-.UpArrowBlue, .Promotions, .Messages, .Analytics, .Dashboard, .AnalyticsGreen1, .PromotionsGreen1, .MessagesGreen1, .DashboardGreen1, .Search{
+.analytics, .analytics-green, .dashboard, .dashboard-green, .diagonal, .messages, .messages-green, .search, .up-arrow-blue{
 	background: url(sprites.png) no-repeat;
-	display:block;
+	display: block;
 }
 
-.UpArrowBlue{
-	background-position: -317px -16px ;
-	width: 14px;
-	height: 9px;
-}
-
-.Promotions{
-	background-position: -65px -4px ;
-	width: 58px;
-	height: 69px;
-}
-
-.Messages{
-	background-position: -127px -5px ;
-	width: 58px;
-	height: 65px;
-}
-
-.Analytics{
-	background-position: -192px -3px ;
+.analytics{
+	background-position: -100px 0;
 	width: 58px;
 	height: 66px;
 }
 
-
-
-.Dashboard {
-	background-position: 0 -1px ;
-	width: 59px;
-	height: 73px;
-}
-
-.Dashboard:hover{
-	background-position: 0 -79px ;
-	width: 59px;
-	height: 73px;
-}
-
-.AnalyticsGreen1{
-	background-position: -182px -84px ;
+.analytics:hover{
+	background-position: -158px 0;
 	width: 58px;
 	height: 66px;
 }
-
-.PromotionsGreen1{
-	background-position: -67px -84px ;
-	width: 58px;
-	height: 69px;
-}
-
-.MessagesGreen1{
-	background-position: -126px -87px ;
-	width: 58px;
-	height: 65px;
-}
-
-
-
-.Search{
-	background-position: -268px -9px ;
-	width: 23px;
-	height: 22px;
-}
-
