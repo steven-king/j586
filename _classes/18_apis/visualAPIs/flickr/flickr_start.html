@@ -4,19 +4,13 @@
 <script type="text/javascript">
     var html = ""  // string to hold data before writing to page
     //use any of the flickr api endpoints
-    var apiurl = "http://api.flickr.com/services/feeds/photos_public.gne?tags=ncaa&tagmode=any&format=json&jsoncallback=?"
+    var apiurl = ""
     $(document).ready(function(){
             console.log("document ready")
             $.getJSON(apiurl,function(json){
                 console.log(json);
                 //code for outside loop
-                $("#results").append("<h2>" + json.title + "</h2>");
-                 $.each(json.items,function(i,data){
-                    //inside loop code
-                    html += '<p>From:"'+ data.author_id+'"</p>';
-                    html += "<img src='" + data.media.m + "'>";
-                    });
-                console.log(html);
+                
                 //after loop code
                 $("#results").append(html);
             });
