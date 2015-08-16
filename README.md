@@ -11,7 +11,7 @@ This class teaches interactive presentation of visuals and data using HTML,CSS a
 * Office Hours: Wednesdays from 10am-Noon and when sign says open!
 * Office: Room 77 In VisCom Suite near class room.
 * Twitter: @steven_king
-* GitHub: steven-king
+* GitHub: @steven-king
 * Phone: 919-360-8907
 
 
@@ -30,3 +30,7 @@ Design thinking and visual problem solving
 
 ## Prerequisites and Prior Knowledge
 JOMC 187 Introduction to Interactive Media. or proven experience of HTML, CSS and responsive design
+
+## Book
+* http://bit.ly/phoneGapBook
+* http://bit.ly/hcdBook
