@@ -31,6 +31,3 @@ Design thinking and visual problem solving
 ## Prerequisites and Prior Knowledge
 JOMC 187 Introduction to Interactive Media. or proven experience of HTML, CSS and responsive design
 
-## Book
-* http://bit.ly/phoneGapBook
-* http://bit.ly/hcdBook
