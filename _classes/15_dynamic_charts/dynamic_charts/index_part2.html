@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <name>Load XML With jQuery</name>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+    
+           
+            var name = [];
+            var other_awards = [];
+	    var pulitzers = [];
+
+    
+    $(document).ready(function()
+      {
+	
+	
+	
+        
+        $.ajax({
+		type: "GET",
+		url: "myData.xml",
+		dataType: "xml",
+		success: function(xml) {
+                    
+                $('body').append('<h1>Top Journalists</h1>');
+                $('body').append('<dl />');
+
+        $(xml).find('person').each(function(){
+            //console.log("once for every person");
+            var $person = $(this); 
+	    name.push($person.attr("name"));
+            other_awards.push($person.find(other-awards).text());
+	    pulitzers.push($person.find(pulitzers).text());
+	    var description = $person.find('description').text();
+            var imageurl = $person.attr('imageurl');
+	    
+	    
+
+            var html = '<dt> <img class="bioImage" alt="" src="' + imageurl + '" /> </dt>';
+            html += '<dd> <span class="loadingPic" alt="Loading" />';
+            html += '<p class="name">' + name[i] + '</p>';
+            html += '<p> ' + description + '</p>' ;
+            html += '</dd>';
+
+            $('dl').append($(html));
+            
+            $('.loadingPic').fadeOut(1400);
+        });
+                }
+    });
+	
+	console.log(pulitzers);
+	var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: 'chart',
+            type: 'bar'
+        },
+        title: {
+            text: 'Awards Won'
+        },
+        xAxis: {
+            categories: [name[0], name[1], name[2]]
+        },
+        yAxis: {
+            title: {
+                text: 'Awards'
+            }
+        },
+        series: [{
+            name: 'Pulitzers',
+            data: [pulitzers[0], pulitzers[1], pulitzers[2]]
+        }, {
+            name: 'Other',
+            data: [other_awards[0], other_awards[1], other_awards[2]]
+        }]
+    });
+	
+	
+	
+});
+    </script>
+
+</head>
+<body>
+    <div id="chart"></div>
+</body>
+</html>

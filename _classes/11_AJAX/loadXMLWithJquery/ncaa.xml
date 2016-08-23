@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<people>
+	<person name="Holden Thorp" last="Thorp"> 
+		<location>Chapel Hill</location>
+		<cords>p-540-181</cords>
+		<occupation>Chancellor of UNC-Chapel Hill</occupation>
+		<role>Has orderd and helped in the investigation.</role>
+		<photo>images/thorp.jpg</photo>
+		<number>30</number>
+	</person>
+
+<person name="Dick Baddour" last="Baddour"> 
+	<location>Unknown</location>
+	<cords>p-540-181</cords>
+	<occupation>Unkown/Unemployed</occupation>
+	<role>
+	Dick Baddour, athletic director at UNC who will be stepping down Nov. 14, has overseen the athletic department for 14 years.</role>
+	<photo>images/baddour.jpg</photo>
+	<number>50</number>
+</person>
+
+<person name="John Blake" last="Blake"> 
+	<location>Unkown</location>
+	<cords>p-540-181</cords>
+	<occupation>Unkown</occupation>
+	<role>John Blake, former UNC assistant coach hired in 20TK, was a primary player in NCAA allegations that centered on his relationship with close friend and NFL agent Gary Wichard.</role>
+	<photo>images/blake.jpg</photo>
+	<number>20</number>
+	</person>
+	
+</people>

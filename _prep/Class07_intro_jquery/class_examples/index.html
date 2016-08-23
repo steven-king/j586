@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>jQuery Examples</title>
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="jquery.simpletip-1.3.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+   // jQuery methods go here...
+   console.log("Everything is ready to go!")
+   //$("p").hide();
+   
+   $("button").click(function(){
+        $("#test").hide();
+  });
+   
+   $("#demo").simpletip({
+
+   // Configuration properties
+   content: 'My Simpletip',
+   fixed: false
+
+});
+            
+
+});
+
+</script>
+
+<style>
+.tooltip{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   z-index: 3;
+   display: none;
+   border:1px solid gray;
+   background-color:#56A0D3;
+   color:white;
+}
+            
+    
+</style>
+
+</head>
+
+<body>
+    <h2>Headline</h2>
+    <p>This is a paragraph</p>
+    <p id="test">This is another paragraph.</p>
+    <button>Click me</button>
+    <div id="demo">This is the demo box.</div>
+    
+
+</body>
+</html>
