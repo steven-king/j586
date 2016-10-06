@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Load XML With jQuery</title>
+    <script src="jquery-1.2.6.js" type="text/javascript"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $.get('ncaa.xml', function(d){
+            $('body').append('<h1>Tarheel Investigation</h1>');
+            $('body').append('<dl />');
+
+            $(d).find('person').each(function(){
+                //console.log("once for every person");
+                var $person = $(this);
+                var name = $person.attr("name");
+                var location = $person.find('location').text();
+                var occupation = $person.find('occupation').text();
+                var role = $person.find('role').text();
+                var photo = $person.find('photo').text();
+                console.log(photo);
+
+                var html = '<dt> <img class="bioImage" alt="" src="' + photo + '" /> </dt>';
+                html += '<dd> <span class="loadingPic" alt="Loading" />';
+                html += '<p class="name">' + name + '</p>';
+                html += '<p><strong>Current Location:</strong> ' + location + '</p>' ;
+                html += '<p> ' + role + '</p>' ;
+                html += '</dd>';
+                $('dl').append($(html));
+                $('.loadingPic').fadeOut(1400);
+            });
+
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>
