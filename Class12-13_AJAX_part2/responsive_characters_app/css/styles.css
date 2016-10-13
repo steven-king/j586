@@ -1,0 +1,49 @@
+body{
+    padding-top:50px;
+}
+
+
+
+
+.bg-blue{
+    background: #56A0D3;
+    color:white;
+}
+
+.floatRight{
+    float:right;
+    border: 1px solid black;
+    margin-top:20px;
+}
+
+.floatLeft{
+    float:left;
+    border: 1px solid black;
+    display: inline;
+}
+
+.characters p {
+	margin: 1em 0 0 0;
+	padding: 0px;
+}
+
+ul.characters {
+	list-style: none;
+	margin-top:0px;
+	margin-left: 0;
+	padding-left: 1em;
+	padding-bottom:0px;
+	border-bottom: 1px dotted #666;
+	font-size:125%;
+	
+	
+	
+}
+
+ul.characters h3{
+	margin-bottom:0px;
+	padding:0px;
+	color:#2779aa;	
+}
+
+
