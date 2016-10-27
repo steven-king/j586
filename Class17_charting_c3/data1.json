@@ -1,0 +1,28 @@
+{
+  "stateRecals":[
+    {"state":"2016",
+      "recals":"30",
+      "injuries": "50"},
+
+    {"state":"2014",
+      "recals":"200",
+      "injuries": "20"},
+
+    {"state":"2013",
+      "recals":"100",
+      "injuries": "10"},
+
+    {"state":"2012",
+      "recals":"400",
+      "injuries": "40"},
+
+    {"state":"2011",
+      "recals":"150",
+      "injuries": "15"},
+
+    {"state":"2010",
+      "recals":"250",
+      "injuries": "25"}
+
+
+]}
