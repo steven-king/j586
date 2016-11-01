@@ -1,10 +1,10 @@
-
-
 var dataArray1 = ['data1', 30, 200, 100, 400, 150, 250];
 var dataArray2 = ['data2', 50, 20, 10, 40, 15, 25]
 
+
 $( document ).ready(function() {
   loadData("data1.json");
+  //buildChart();
 });
 function loadData(dataURL){
 
@@ -19,17 +19,8 @@ function loadData(dataURL){
 
 function parseData(data){
   console.log(data);
-  console.log(data.stateRecals[0].recals);
-  dataArray1 = ["recals"];
-  dataArray2= ["injuries"];
 
-  $.each(data.stateRecals, function(i, item) {
-    console.log(i);
-    console.log(item);
-    dataArray1.push(item.recals);
-    dataArray2.push(item.injuries)
 
-})
   console.log(dataArray2);
   buildChart();
 }

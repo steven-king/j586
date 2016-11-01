@@ -21,8 +21,8 @@ function loadData(dataURL){
 function parseData(data){
   console.log(data);
   console.log(data.stateRecals[0].recals);
-  dataArray1 = ["recals"];
-  dataArray2= ["injuries"];
+  dataArray1 = ["Recals"];
+  dataArray2= ["Injuries"];
 
   $.each(data.stateRecals, function(i, item) {
     console.log(i);
@@ -48,10 +48,10 @@ var chart = c3.generate({
         dataArray2
       ],
       axes: {
-        data2: 'y2'
+        Injuries: 'y2'
       },
       types: {
-        data2: 'bar',
+        Injuries: 'bar',
       }
     },
     axis: {
