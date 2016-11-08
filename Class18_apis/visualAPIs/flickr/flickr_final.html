@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+    var html = ""
+    var apiurl = "http://api.flickr.com/services/feeds/photos_public.gne?tags=baseball&tagmode=any&format=json&jsoncallback=?"
+    $(document).ready(function(){
+            console.log("document ready")
+            $.getJSON(apiurl,function(json){
+                console.log(json);
+                $("#results").append('<p>"'+json.title+'"</p>');
+
+                $.each(json.items,function(i,data){
+                    html += '<p>From:"'+ data.author_id+'"</p>';
+                    html += '<img src ="' + data.media.m + '">'
+                    });
+                console.log(html);
+                $("#results").append(html);
+            });
+            
+       
+    });
+    
+</script>
+</head>
+<body>
+<div id="results"></div>
+</body>
+</html>
