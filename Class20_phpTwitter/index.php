@@ -39,8 +39,9 @@ $tweetData = json_decode($twitter->setGetfield($getfield)
 
 foreach($tweetData['statuses'] as $index => $items){
       $userArray = $items['user'];
-      echo '<div class="twitter-tweet"> ' . $userArray['screen_name'] . $items['text'];
+      echo '<div class="twitter-tweet"> <a href="http://twitter.com/' . $userArray['screen_name'] . '"><img src="' . $userArray['profile_image_url'] . '"></a><a href="http://twitter.com/' . $userArray['screen_name'] . '">' . $userArray['name'] . '</a><br/>' . $items['text'];
       echo '<br/>' . $items['created_at'];
       echo '</div>';
+
 
 };
